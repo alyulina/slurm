@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+# 
 #SBATCH --job-name=name
 #SBATCH --output=name-%A_%a.out
 #
@@ -7,7 +7,7 @@
 #Maximum runtime is limited to 10 days, ie. 240 hours
 #SBATCH --time=1-00:00
 #
-#Define the amount of RAM used by your job in GigaBytes
+#Define the amount of RAM used by your job in GB
 #SBATCH --mem=64G
 #
 #Specify account and partition
