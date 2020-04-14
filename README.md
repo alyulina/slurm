@@ -1,1 +1,1 @@
-.sh scripts used to submit jobs on the IST cluster
+.sh scripts used to submit jobs
