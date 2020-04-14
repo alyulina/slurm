@@ -1,1 +1,1 @@
-.sh scripts used to submit jobs
+Scripts used to submit jobs
