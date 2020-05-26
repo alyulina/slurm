@@ -7,10 +7,10 @@
 #SBATCH --output=name-%A_%a.out
 #
 #Specify time limit; max is 10 days, i.e. 240 hours
-#SBATCH --time=1-00:00
+#SBATCH --time=10-00:00
 #
 #Specify memory in gigabytes
-#SBATCH --mem=64G
+#SBATCH --mem=4G
 #
 #Specify account and partition
 #SBATCH --account=kondrgrp
@@ -38,4 +38,4 @@ module load python/3.5
 #
 echo $SLURM_ARRAY_TASK_ID
 #Run the binary that takes $SLURM_ARRAY_TASK_ID as input
-srun --cpu_bind=verbose python ./script.py -i $SLURM_ARRAY_TASK_ID
+srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path/to/the/binary 
