@@ -4,7 +4,7 @@
 #
 #Give your job a name
 #SBATCH --job-name=name
-#SBATCH --output=name-%A_%a.out
+#SBATCH --output=/nfs/scistore08/kondrgrp/alyulina/path-to-the-outputs/name-%A_%a.out
 #
 #Specify time limit; max is 10 days, i.e. 240 hours
 #SBATCH --time=1-00:00
