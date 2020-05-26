@@ -1,6 +1,7 @@
 #!/bin/bash
 # 
-#This is a job array to run script.py -i array task ID
+#This is a job array to run a script changind input parameters;
+#requires an additional input file of lenght N
 #
 #Give your job a name
 #SBATCH --job-name=name
@@ -23,8 +24,8 @@
 # Do not restart the job if it fails
 #SBATCH --no-requeue
 #
-#Submit a job array of N + 1 jobs
-#SBATCH --array=0-N
+#Submit a job array of N jobs
+#SBATCH --array=1-N
 #
 #Do not export the local environment to the compute nodes
 #SBATCH --export=NONE
@@ -33,9 +34,9 @@ unset SLURM_EXPORT_ENV
 #For single-CPU jobs, make sure that they use a single thread
 export OMP_NUM_THREADS=1
 #
-#Load the software module you intend to use
-module load python/3.5
+#Load modules, if needed
 #
 echo $SLURM_ARRAY_TASK_ID
-#Run the binary that takes $SLURM_ARRAY_TASK_ID as input
-srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path/to/the/binary 
+#
+#Run the binary that takes nth line of input.txt as input
+srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path/to/the/binary $(head -$SLURM_ARRAY_TASK_ID input.txt | tail -1)
