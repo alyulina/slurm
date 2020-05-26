@@ -5,7 +5,7 @@
 #
 #Give your job a name
 #SBATCH --job-name=name
-#SBATCH --output=name-%A_%a.out
+#SBATCH --output=/nfs/scistore08/kondrgrp/alyulina/path-to-outputs/name-%A_%a.out
 #
 #Specify time limit; max is 10 days, i.e. 240 hours
 #SBATCH --time=10-00:00
@@ -40,4 +40,4 @@ export OMP_NUM_THREADS=1
 echo $SLURM_ARRAY_TASK_ID
 #
 #Run a binary that takes nth line of input.txt as input
-srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path/to/the/binary $(head -$SLURM_ARRAY_TASK_ID input.txt | tail -1)
+srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path-to-the-binary $(head -$SLURM_ARRAY_TASK_ID input.txt | tail -1)
