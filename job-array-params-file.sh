@@ -36,6 +36,7 @@ export OMP_NUM_THREADS=1
 #
 #Load modules, if needed
 #
+# Pring the task id
 echo $SLURM_ARRAY_TASK_ID
 #
 #Run a binary that takes nth line of input.txt as input
