@@ -37,5 +37,5 @@ export OMP_NUM_THREADS=1
 module load python/3.5
 #
 echo $SLURM_ARRAY_TASK_ID
-#Run the binary that takes $SLURM_ARRAY_TASK_ID as input
+#Run a script that takes $SLURM_ARRAY_TASK_ID as input
 srun --cpu_bind=verbose python ./script.py -i $SLURM_ARRAY_TASK_ID
