@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-#This is a job array to run a script changind input parameters;
+#This is a job array to run a script varying input parameters;
 #requires an additional input file of lenght N
 #
 #Give your job a name
