@@ -13,7 +13,7 @@
 #Specify memory in gigabytes
 #SBATCH --mem=4G
 #
-#Specify account and partition
+#Specify account and partition, if needed
 #SBATCH --account=kondrgrp
 #SBATCH --partition=bigtb
 #
@@ -36,7 +36,7 @@ export OMP_NUM_THREADS=1
 #
 #Load modules, if needed
 #
-# Pring the task id
+#Print the task id
 echo $SLURM_ARRAY_TASK_ID
 #
 #Run a binary that takes nth line of input.txt as input
