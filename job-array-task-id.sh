@@ -20,7 +20,7 @@
 #SBATCH --mail-user=alyulina@ist.ac.at
 #SBATCH --mail-type=ALL
 #
-# Do not restart the job if it fails
+#Do not restart the job if it fails
 #SBATCH --no-requeue
 #
 #Submit a job array of N + 1 jobs
