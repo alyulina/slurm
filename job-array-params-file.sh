@@ -38,5 +38,5 @@ export OMP_NUM_THREADS=1
 #
 echo $SLURM_ARRAY_TASK_ID
 #
-#Run the binary that takes nth line of input.txt as input
+#Run a binary that takes nth line of input.txt as input
 srun --cpu_bind=verbose /nfs/scistore08/kondrgrp/alyulina/path/to/the/binary $(head -$SLURM_ARRAY_TASK_ID input.txt | tail -1)
