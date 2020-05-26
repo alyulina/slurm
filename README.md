@@ -1,1 +1,1 @@
-Some scripts used to submit jobs.
+Some scripts used to submit jobs on the cluster.
