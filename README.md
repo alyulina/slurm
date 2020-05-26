@@ -1,1 +1,1 @@
-Scripts used to submit jobs
+Some scripts used to submit jobs
