@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-#This is a job array to run script.py -i array task ID
+#This is a job array to run script.py -i array task id
 #
 #Give your job a name
 #SBATCH --job-name=name
@@ -36,6 +36,8 @@ export OMP_NUM_THREADS=1
 #Load the software module you intend to use
 module load python/3.5
 #
+#Print the task id
 echo $SLURM_ARRAY_TASK_ID
+#
 #Run a script that takes $SLURM_ARRAY_TASK_ID as input
 srun --cpu_bind=verbose python ./script.py -i $SLURM_ARRAY_TASK_ID
