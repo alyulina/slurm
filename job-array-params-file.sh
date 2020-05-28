@@ -24,8 +24,8 @@
 #Do not restart the job if it fails
 #SBATCH --no-requeue
 #
-#Submit a job array of N jobs
-#SBATCH --array=1-N
+#Submit a job array of N jobs limiting the number of simultateously running ones to K
+#SBATCH --array=1-N%K
 #
 #Do not export the local environment to the compute nodes
 #SBATCH --export=NONE
