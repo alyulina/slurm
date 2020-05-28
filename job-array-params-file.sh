@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
 #This is a job array to run a script varying input parameters;
-#requires an additional input file of lenght N
+#requires an additional input file of length N
 #
 #Give your job a name
 #SBATCH --job-name=name
